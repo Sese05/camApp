@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="candy">
+    <ion-title>
+      Cam App
+    </ion-title>
+  </ion-navbar >
+</ion-header>
+
+<ion-content class="card-background" padding>
+    <button ion-button round color="sweet" (tap)="toggle()"> <ion-icon ios="ios-flash" md="md-flash"></ion-icon> </button>
+  <br><br><br>
+   
+ <button ion-button full round color="sweet" (click)="takePhoto()">
+ <ion-icon name="camera"></ion-icon>
+</button>
+<button ion-button  full round color="sweet" (click)="accessGallery()"><ion-icon ios="ios-images" md="md-images"></ion-icon> 
+   </button>
+<ion-grid>
+  <ion-row>
+    <ion-col col-6 *ngFor="let photo of photos; let id = index">
+      <ion-card class="block">
+        <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+        <img [src]="photo" *ngIf="photo" />
+      </ion-card>
+</ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

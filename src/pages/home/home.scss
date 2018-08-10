@@ -1,0 +1,21 @@
+page-home {
+.block{
+    position: relative;
+.deleteIcon{
+    position: absolute;
+    color: #ffffff ;
+    margin-left: 80%;
+}
+.deleteIcon:before {
+    font-size: 30px;
+}
+}
+    .card-background{
+        background-image: url('../assets/imgs/camera.jpg');
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: 100% 100%;
+        background-image: transparent;
+        border-radius: 10px;
+    }    
+}
